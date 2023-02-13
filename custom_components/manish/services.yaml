@@ -1,0 +1,7 @@
+notify:
+  description: "Send a notification using ma-nish wrapper for Whatsapp cloud API"
+  fields:
+    message:
+      description: The message to send
+      example: "Hello World"
+    
