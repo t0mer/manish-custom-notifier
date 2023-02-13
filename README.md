@@ -34,7 +34,7 @@ Once you're done with the above ,you're ready to start send notifications using 
 
 
 ### Installation
-The IMS custom component can be installed manualy by downloading the files and place it under custom_components folder.
+The manish custom component can be installed manualy by downloading the files and place it under custom_components folder.
 
 The second way is by adding the repo address to HACS custom repositories.
 
@@ -56,10 +56,25 @@ You can now see that the repository has been added to the custom repositories li
 
 Click the new repo and you will see the repo details:
 
-[![IMS custom component](https://github.com/t0mer/manish-custom-notifier/blob/main/screenshots/manish-add-button.png?raw=true "IMS custom component")](https://github.com/t0mer/manish-custom-notifier/blob/main/screenshots/manish-add-button.png?raw=true "IMS custom component")
+[![manish custom component](https://github.com/t0mer/manish-custom-notifier/blob/main/screenshots/manish-add-button.png?raw=true "manish custom component")](https://github.com/t0mer/manish-custom-notifier/blob/main/screenshots/manish-add-button.png?raw=true "manish custom component")
 
 Now click the download button on the lower left corner:
 
-**Restart** the Home Assistant instance to load ims integration before moving on.
+**Restart** the Home Assistant instance to load manish integration before moving on.
 
 ### Configuration
+To use the custom notification, we need to add some linse to the configuration.yaml file.
+
+```yaml
+notify:
+  - platform: manish
+    name: MaNish whatsapp notifire
+    target: # WhatsApp number for notificatin (Without the + sign of the country_code)
+    token: #T he token for the Whatsapp cloud API
+    phone_number_id: #Phone number id from the Whatsapp cloud API
+    template: # Template's name's to use
+    language: # Template's language
+```
+
+Restart HomeAssistant and you should see a new service :
+[![manish custom component](https://github.com/t0mer/manish-custom-notifier/blob/main/screenshots/manish-notification-service.png?raw=true "manish custom component")](https://github.com/t0mer/manish-custom-notifier/blob/main/screenshots/manish-notification-service.png?raw=true "manish custom component")
