@@ -1,13 +1,12 @@
 {
     "domain": "manish",
     "name": "Whatsapp notifier basde on manish api wrapper for whatsapp cloud api",
-    "documentation": "https://github.com/t0mer/manish-custom-notifier",
-    "issue_tracker": "https://github.com/t0mer/manish-custom-notifier/issues",
-    "dependencies": [],
     "codeowners": [
     "@t0mer"
     ],
-    "requirements": ["ma-nish>=0.5.0"],
+    "documentation": "https://github.com/t0mer/manish-custom-notifier",
     "iot_class": "local_polling",
+    "issue_tracker": "https://github.com/t0mer/manish-custom-notifier/issues",
+    "requirements": ["ma-nish>=0.5.0"],
     "version": "0.1.0"
 }
