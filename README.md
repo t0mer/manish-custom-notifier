@@ -1,3 +1,5 @@
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://github.com/hacs/integration)
+
 # manish-custom-notifier-
 manish custom notifier for HomeAssistant allows you to send whatsapp notification using Whatsapp Cloud API easily and with minimal configuration.
 
@@ -34,33 +36,8 @@ Once you're done with the above ,you're ready to start send notifications using 
 
 
 ### Installation
-The manish custom component can be installed manualy by downloading the files and place it under custom_components folder.
-
-The second way is by adding the repo address to HACS custom repositories.
-
-First, in HACS you need to add the repository to the lis of custom repositories by clicking the 3 dots on the upper right corner and click the "Custom repositories" button:
-
-[![Manish custom notifier](https://github.com/t0mer/ims-custom-component/blob/main/screenshots/add_custom_repositories.png?raw=true "Manish custom notifier")](https://github.com/t0mer/ims-custom-component/blob/main/screenshots/add_custom_repositories.png.png?raw=true "Manish custom notifier")
-
-
-Now, add the custom repository address: https://github.com/t0mer/manish-custom-notifier and under category select "Integration".
-
-Click on the "Add button" to add the repository.
-
-[![Manish custom notifier](https://github.com/t0mer/manish-custom-notifier/blob/main/screenshots/manish-notifier-add-hacs-repo.png?raw=true "Manish custom notifier")](https://github.com/t0mer/manish-custom-notifier/blob/main/screenshots/manish-notifier-add-hacs-repo.png?raw=true "Manish custom notifier")
-
-You can now see that the repository has been added to the custom repositories list:
-
-[![Manish custom notifier](https://github.com/t0mer/manish-custom-notifier/blob/main/screenshots/manish-new-repo.png?raw=true "Manish custom notifier")](https://github.com/t0mer/manish-custom-notifier/blob/main/screenshots/manish-new-repo.png?raw=true "Manish custom notifier")
-
-
-Click the new repo and you will see the repo details:
-
-[![manish custom component](https://github.com/t0mer/manish-custom-notifier/blob/main/screenshots/manish-add-button.png?raw=true "manish custom component")](https://github.com/t0mer/manish-custom-notifier/blob/main/screenshots/manish-add-button.png?raw=true "manish custom component")
-
-Now click the download button on the lower left corner:
-
-**Restart** the Home Assistant instance to load manish integration before moving on.
+manish is now part ot the Default HACS repositories list.
+Just add it from the Integrations list.
 
 ### Configuration
 To use the custom notification, we need to add some linse to the configuration.yaml file.
