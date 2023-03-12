@@ -36,11 +36,10 @@ def get_service(hass, config, discovery_info=None):
     return ManishNotificationService(target, title, token, phone_number_id, template, language)
 
 class ManishNotificationService(BaseNotificationService):
-    """Implementation of a custom notification service."""
-
+    
     def __init__(self, target, title, token, phone_number_id, template, language):
         """Initialize the service."""
-        self._target = target
+        self._targets = target.split(',')
         self._title = title
         self._token = token
         self._phone_number_id = phone_number_id
@@ -51,9 +50,10 @@ class ManishNotificationService(BaseNotificationService):
     def send_message(self, message="", **kwargs):
         """Send a message to the target."""
         try:
-            _LOGGER.info("Sending message to %s: %s", self._target, message)
-            body = Component(type="body",parameters=[Parameter(type="text",text = message)])
-            result = self._manish.send_template(components=TemplateEncoder().encode([body]),recipient_id=self._target,template=self._template,lang=self._language)
-            _LOGGER.warning("Whatsapp: " + str(result))
+            for target in self._targets:
+                _LOGGER.info("Sending message to %s: %s", target, message)
+                body = Component(type="body",parameters=[Parameter(type="text",text = message)])
+                result = self._manish.send_template(components=TemplateEncoder().encode([body]),recipient_id=target,template=self._template,lang=self._language)
+                _LOGGER.warning("Whatsapp: " + str(result))
         except Exception as e:
             _LOGGER.error("Sending message to %s: %s has failed with the following error %s", self._target, message, str(e))
